@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Creditos.mp4</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #mensaje {
+      display: none;
+      font-size: 2em;
+      margin-top: 20px;
+    }
+    video {
+      max-width: 80%;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" controls>
+    <source src="VBSs.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+  <div id="mensaje">Gracias por jugar :)</div>
+
+  <script>
+    const video = document.getElementById('video');
+    const mensaje = document.getElementById('mensaje');
+
+    video.addEventListener('ended', () => {
+      mensaje.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
